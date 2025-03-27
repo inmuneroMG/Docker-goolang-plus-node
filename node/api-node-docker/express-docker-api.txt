@@ -1,0 +1,27 @@
+# Estructura de proyecto:
+# /proyecto
+# ├── Dockerfile
+# ├── package.json
+# └── src
+#     └── index.js
+
+# Dockerfile
+FROM node:16-alpine
+
+# Establece el directorio de trabajo
+WORKDIR /app
+
+# Copia los archivos de dependencias
+COPY package*.json ./
+
+# Instala dependencias
+RUN npm install
+
+# Copia el código fuente
+COPY . .
+
+# Expone el puerto que usará la API
+EXPOSE 3000
+
+# Comando para iniciar la aplicación
+CMD ["node", "src/index.js"]

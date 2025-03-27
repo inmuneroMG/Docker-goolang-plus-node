@@ -1,0 +1,24 @@
+# Ignorar archivos de Git
+.git
+.gitignore
+
+# Ignorar archivos de Docker
+Dockerfile
+.dockerignore
+
+# Ignorar archivos de Go
+*.exe
+*.test
+*.prof
+bin/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Directorios de dependencias
+vendor/
+node_modules/
+
+# Archivos de logs
+*.log
